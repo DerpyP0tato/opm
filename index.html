@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corning BioOps — Bioprocess Operations Platform</title>
+  <meta name="description" content="Corning BioOps: Connected bioprocess operations platform for lab management, hardware workflows, inventory intelligence, and supply chain visibility.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- Sidebar Overlay (mobile) -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M9 3h6m-5 0v6.5L4 18a1 1 0 001 1h14a1 1 0 001-1l-6-8.5V3"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Corning BioOps</span>
+          <span class="brand-sub">Life Sciences</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">Overview</div>
+        <button class="nav-item active" data-page="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </button>
+
+        <div class="nav-section-label">Operations</div>
+        <button class="nav-item" data-page="bioprocess">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Bioprocess Ops
+        </button>
+        <button class="nav-item" data-page="hardware">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3m6-3v3M9 20v3m6-3v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+          Hardware Workflows
+        </button>
+        <button class="nav-item" data-page="inventory">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+          Inventory & Supply
+        </button>
+
+        <div class="nav-section-label">Platform</div>
+        <button class="nav-item" data-page="control-tower">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          Control Tower
+        </button>
+        <button class="nav-item" data-page="subscription">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Subscription
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="user-avatar">DR</div>
+          <div class="user-info">
+            <span class="user-name">Dr. Rachel Kim</span>
+            <span class="user-role">Lab Manager</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" aria-label="Open menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <div>
+            <h1 class="page-title">Dashboard</h1>
+            <div class="page-breadcrumb">Corning BioOps › Overview</div>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="header-role-badge">Lab Manager</span>
+          <button class="header-icon-btn" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+            <span class="notif-dot"></span>
+          </button>
+          <button class="header-icon-btn" aria-label="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+
+        <!-- ===== DASHBOARD ===== -->
+        <section id="page-dashboard" class="page-section active">
+          <div class="dashboard-welcome">
+            <h2>Good afternoon, Dr. Kim</h2>
+            <p>Here's your lab and operations overview for today.</p>
+          </div>
+
+          <div class="grid-3 dashboard-metrics" id="dashboard-metrics"></div>
+
+          <div class="dashboard-grid">
+            <!-- Alerts -->
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Active Alerts & Notifications</span>
+                <button class="card-action">View All</button>
+              </div>
+              <div id="dashboard-alerts"></div>
+            </div>
+
+            <!-- Demand Forecast -->
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Demand Forecast</span>
+                <div style="display:flex; gap:var(--space-3); align-items:center;">
+                  <span class="text-xs" style="display:flex; align-items:center; gap:4px;">
+                    <span style="width:12px; height:3px; background:var(--primary-600); border-radius:2px; display:inline-block;"></span> Actual
+                  </span>
+                  <span class="text-xs" style="display:flex; align-items:center; gap:4px;">
+                    <span style="width:12px; height:3px; background:var(--neutral-400); border-radius:2px; display:inline-block; border-top:1px dashed var(--neutral-400);"></span> Forecast
+                  </span>
+                </div>
+              </div>
+              <div class="chart-container">
+                <canvas id="chart-demand-forecast"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipments -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Shipment Tracking</span>
+              <button class="card-action">View All Shipments</button>
+            </div>
+            <div id="dashboard-shipments" class="overflow-x"></div>
+          </div>
+        </section>
+
+        <!-- ===== BIOPROCESS OPERATIONS ===== -->
+        <section id="page-bioprocess" class="page-section">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Reactor & Workflow Monitoring</div>
+              <div class="section-desc">Real-time sensor data, process phases, and AI-powered recommendations</div>
+            </div>
+            <button class="btn btn-secondary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Export Data
+            </button>
+          </div>
+
+          <div id="reactor-grid" class="reactor-grid"></div>
+
+          <div class="card mt-6">
+            <div class="card-header">
+              <span class="card-title">Sensor Trend — BRX-001 (72h)</span>
+              <div style="display:flex; gap:var(--space-3); align-items:center;">
+                <span class="text-xs" style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:3px;background:var(--primary-600);border-radius:2px;display:inline-block"></span>pH ×10</span>
+                <span class="text-xs" style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:3px;background:#10b981;border-radius:2px;display:inline-block"></span>DO₂ %</span>
+                <span class="text-xs" style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:3px;background:#f59e0b;border-radius:2px;display:inline-block"></span>Temp °C</span>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-sensor-trend"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== HARDWARE WORKFLOWS ===== -->
+        <section id="page-hardware" class="page-section">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Connected Instruments</div>
+              <div class="section-desc">Device status, diagnostics, and workflow mapping</div>
+            </div>
+            <button class="btn btn-secondary">Add Device</button>
+          </div>
+
+          <div id="device-grid" class="device-grid"></div>
+
+          <div class="card mt-6">
+            <div class="card-header">
+              <span class="card-title">Data Workflow Map</span>
+              <span class="text-xs text-muted">How data flows across your connected ecosystem</span>
+            </div>
+            <div id="workflow-diagram" class="workflow-flow"></div>
+          </div>
+
+          <div class="card mt-4">
+            <div class="card-header">
+              <span class="card-title">Maintenance Schedule</span>
+              <button class="card-action">Schedule New</button>
+            </div>
+            <div id="maintenance-table" class="overflow-x"></div>
+          </div>
+        </section>
+
+        <!-- ===== INVENTORY & SUPPLY ===== -->
+        <section id="page-inventory" class="page-section">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Inventory Management</div>
+              <div class="section-desc">Stock levels, reorder recommendations, and consumable forecasting</div>
+            </div>
+            <div style="display:flex; gap:var(--space-2);">
+              <button class="btn btn-secondary">Auto-Replenish Settings</button>
+              <button class="btn btn-primary">New Order</button>
+            </div>
+          </div>
+
+          <div id="inventory-list" class="mb-6"></div>
+
+          <div class="dashboard-grid">
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Regional Demand Comparison</span>
+                <div style="display:flex; gap:var(--space-3); align-items:center;">
+                  <span class="text-xs" style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:3px;background:var(--primary-600);border-radius:2px;display:inline-block"></span>Current</span>
+                  <span class="text-xs" style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:3px;background:var(--primary-300);border-radius:2px;display:inline-block"></span>Forecast</span>
+                </div>
+              </div>
+              <div class="chart-container">
+                <canvas id="chart-regional-demand"></canvas>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Inbound Shipments</span>
+              </div>
+              <div id="supply-shipments" class="overflow-x"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== OPERATIONS CONTROL TOWER ===== -->
+        <section id="page-control-tower" class="page-section">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Global Operations Control Tower</div>
+              <div class="section-desc">Enterprise view of connected labs, demand, inventory, and service activity</div>
+            </div>
+            <span class="header-role-badge" style="background: var(--warning-50); color: var(--warning-600); border-color: var(--warning-100);">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Internal — Corning Operations
+            </span>
+          </div>
+
+          <!-- Global Labs -->
+          <div class="card mb-4">
+            <div class="card-header">
+              <span class="card-title">Connected Labs — Reactor Utilization by Region</span>
+            </div>
+            <div id="global-labs"></div>
+          </div>
+
+          <div class="tower-top-grid">
+            <!-- Category Demand -->
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Demand by Product Category</span>
+              </div>
+              <div class="chart-container">
+                <canvas id="chart-category-demand"></canvas>
+              </div>
+            </div>
+
+            <!-- Warehouse -->
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Warehouse Inventory Allocation</span>
+              </div>
+              <div id="warehouse-table" class="overflow-x"></div>
+            </div>
+          </div>
+
+          <!-- Service Tickets -->
+          <div class="card mt-4">
+            <div class="card-header">
+              <span class="card-title">Service Ticket Activity</span>
+              <button class="card-action">View All Tickets</button>
+            </div>
+            <div id="service-tickets" class="overflow-x"></div>
+          </div>
+
+          <!-- Bottlenecks -->
+          <div class="card mt-4">
+            <div class="card-header">
+              <span class="card-title">Supply Chain Bottlenecks</span>
+            </div>
+            <div id="bottlenecks"></div>
+          </div>
+        </section>
+
+        <!-- ===== SUBSCRIPTION & ACCOUNT ===== -->
+        <section id="page-subscription" class="page-section">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Subscription Plans</div>
+              <div class="section-desc">Manage your BioOps plan, connected modules, and billing</div>
+            </div>
+          </div>
+
+          <div id="plan-grid" class="plan-grid"></div>
+
+          <div class="account-grid">
+            <div id="account-info"></div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Enabled Modules</span>
+              </div>
+              <div id="modules-list"></div>
+            </div>
+          </div>
+
+          <div class="card mt-4">
+            <div class="card-header">
+              <span class="card-title">Usage Analytics</span>
+              <div style="display:flex; gap:var(--space-3); align-items:center;">
+                <span class="text-xs" style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:3px;background:var(--primary-600);border-radius:2px;display:inline-block"></span>API Calls</span>
+                <span class="text-xs" style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:3px;background:#10b981;border-radius:2px;display:inline-block;border-top:1px dashed"></span>Data Points (÷5)</span>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-usage"></canvas>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /page-content -->
+    </main>
+  </div><!-- /app-wrapper -->
+
+  <!-- Replenishment Modal -->
+  <div id="modal-replenish" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Approve Replenishment</span>
+        <button class="modal-close" onclick="App.hideModal('modal-replenish')" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="alert-card alert-warning" style="margin-bottom: var(--space-4);">
+          <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div class="alert-text">
+            <div class="alert-title">Low Inventory: T-75 Flasks</div>
+            <div class="alert-desc">Current stock: 180 / 1,000 units (18%). Estimated 4 days of supply remaining at current consumption rate.</div>
+          </div>
+        </div>
+        <div style="background: var(--neutral-50); border-radius: var(--radius-md); padding: var(--space-4); margin-bottom: var(--space-4);">
+          <div style="font-size: var(--text-sm); font-weight: var(--font-semibold); margin-bottom: var(--space-3);">Replenishment Details</div>
+          <div style="display:flex; justify-content:space-between; font-size:var(--text-sm); padding:var(--space-2) 0; border-bottom:1px solid var(--neutral-200)">
+            <span class="text-muted">Item</span><span style="font-weight:500">T-75 Cell Culture Flasks</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:var(--text-sm); padding:var(--space-2) 0; border-bottom:1px solid var(--neutral-200)">
+            <span class="text-muted">SKU</span><span class="text-mono">CLS-430641</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:var(--text-sm); padding:var(--space-2) 0; border-bottom:1px solid var(--neutral-200)">
+            <span class="text-muted">Quantity</span><span style="font-weight:500">500 units</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:var(--text-sm); padding:var(--space-2) 0; border-bottom:1px solid var(--neutral-200)">
+            <span class="text-muted">Source</span><span style="font-weight:500">Corning, NY (Primary)</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:var(--text-sm); padding:var(--space-2) 0;">
+            <span class="text-muted">Est. Delivery</span><span style="font-weight:500">Mar 18, 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="App.hideModal('modal-replenish')">Cancel</button>
+        <button class="btn btn-success" onclick="App.hideModal('modal-replenish'); App.toast('Replenishment order approved — PO-78240 created', 'success')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Approve Order
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+  <script src="js/pages/bioprocess.js"></script>
+  <script src="js/pages/hardware.js"></script>
+  <script src="js/pages/inventory.js"></script>
+  <script src="js/pages/control-tower.js"></script>
+  <script src="js/pages/subscription.js"></script>
+</body>
+</html>
