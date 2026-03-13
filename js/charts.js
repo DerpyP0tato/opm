@@ -8,12 +8,12 @@ const Charts = {
     warning: '#f59e0b',
     danger: '#ef4444',
     info: '#0ea5e9',
-    neutral400: '#94a3b8',
-    neutral200: '#e2e8f0',
-    neutral100: '#f1f5f9',
-    white: '#ffffff',
-    text: '#1e2738',
-    textMuted: '#64748b',
+    neutral400: '#475569',
+    neutral200: '#1e2738',
+    neutral100: '#111827',
+    white: '#1e2738', // Mapped to card backgrounds
+    text: '#e2e8f0',   // Mapped to light text neutral-800
+    textMuted: '#94a3b8', // Mapped to neutral-600
   },
 
   /**

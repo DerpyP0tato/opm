@@ -85,7 +85,7 @@
 }
 
 .sensor-reading {
-  background: var(--neutral-50);
+  background: var(--neutral-300);
   border-radius: var(--radius-md);
   padding: var(--space-3);
   text-align: center;
@@ -119,8 +119,8 @@
 }
 
 .ai-recommendation {
-  background: var(--primary-50);
-  border: 1px solid var(--primary-200);
+  background: var(--primary-100);
+  border: 1px solid var(--primary-400);
   border-radius: var(--radius-md);
   padding: var(--space-3) var(--space-4);
   margin-top: var(--space-3);
@@ -129,7 +129,7 @@
 .ai-recommendation .ai-label {
   font-size: var(--text-xs);
   font-weight: var(--font-semibold);
-  color: var(--primary-600);
+  color: var(--primary-400);
   margin-bottom: var(--space-1);
   display: flex;
   align-items: center;
@@ -333,7 +333,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--white);
+  background: #fff;
   position: absolute;
   top: 2px;
   left: 2px;
