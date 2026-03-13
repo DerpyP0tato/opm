@@ -571,60 +571,6 @@
   border-bottom-color: var(--primary-400);
 }
 
-/* ===== PLAN CARDS ===== */
-.plan-card {
-  background: var(--white);
-  border: 2px solid var(--neutral-200);
-  border-radius: var(--radius-lg);
-  padding: var(--space-6);
-  text-align: center;
-  transition: all var(--transition-fast);
-}
-
-.plan-card.plan-active {
-  border-color: var(--primary-600);
-}
-
-.plan-card .plan-name {
-  font-size: var(--text-lg);
-  font-weight: var(--font-bold);
-  color: var(--neutral-900);
-  margin-bottom: var(--space-1);
-}
-
-.plan-card .plan-price {
-  font-size: var(--text-2xl);
-  font-weight: var(--font-bold);
-  color: var(--primary-400);
-  margin-bottom: var(--space-4);
-}
-
-.plan-card .plan-price span {
-  font-size: var(--text-sm);
-  font-weight: var(--font-normal);
-  color: var(--neutral-500);
-}
-
-.plan-card .plan-features {
-  list-style: none;
-  text-align: left;
-  margin-bottom: var(--space-5);
-}
-
-.plan-card .plan-features li {
-  font-size: var(--text-sm);
-  color: var(--neutral-600);
-  padding: var(--space-2) 0;
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.plan-card .plan-features li::before {
-  content: '✓';
-  color: var(--success-500);
-  font-weight: var(--font-bold);
-}
 
 /* ===== UTILITY ===== */
 .text-mono { font-family: var(--font-mono); }

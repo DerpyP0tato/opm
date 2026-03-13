@@ -56,10 +56,6 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
           Control Tower
         </button>
-        <button class="nav-item" data-page="subscription">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Subscription
-        </button>
       </nav>
 
       <div class="sidebar-footer">
@@ -305,41 +301,6 @@
           </div>
         </section>
 
-        <!-- ===== SUBSCRIPTION & ACCOUNT ===== -->
-        <section id="page-subscription" class="page-section">
-          <div class="section-header">
-            <div>
-              <div class="section-title">Subscription Plans</div>
-              <div class="section-desc">Manage your BioOps plan, connected modules, and billing</div>
-            </div>
-          </div>
-
-          <div id="plan-grid" class="plan-grid"></div>
-
-          <div class="account-grid">
-            <div id="account-info"></div>
-
-            <div class="card">
-              <div class="card-header">
-                <span class="card-title">Enabled Modules</span>
-              </div>
-              <div id="modules-list"></div>
-            </div>
-          </div>
-
-          <div class="card mt-4">
-            <div class="card-header">
-              <span class="card-title">Usage Analytics</span>
-              <div style="display:flex; gap:var(--space-3); align-items:center;">
-                <span class="text-xs" style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:3px;background:var(--primary-600);border-radius:2px;display:inline-block"></span>API Calls</span>
-                <span class="text-xs" style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:3px;background:#10b981;border-radius:2px;display:inline-block;border-top:1px dashed"></span>Data Points (÷5)</span>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="chart-usage"></canvas>
-            </div>
-          </div>
-        </section>
 
       </div><!-- /page-content -->
     </main>
@@ -403,6 +364,6 @@
   <script src="js/pages/hardware.js"></script>
   <script src="js/pages/inventory.js"></script>
   <script src="js/pages/control-tower.js"></script>
-  <script src="js/pages/subscription.js"></script>
+
 </body>
 </html>
